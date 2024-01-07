@@ -10,7 +10,7 @@ export const depositMoney = (amount) => { // deposite action
     }
 }
 
-export const WithdrawMoney = (amount) => { // withdraw action
+export const withdrawMoney = (amount) => { // withdraw action
     return (dispatch) => {
         dispatch({
             type: 'withdraw',
