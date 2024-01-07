@@ -1,7 +1,10 @@
 import React from "react";
+import { useSelector } from "react-redux";  // imported useSelector hook from react-redux
 // Navbar component created from bootstrap
 
 function Navbar() {
+  const amount = useSelector(state => state.amount); // useSelector hook is used to use state variable to display state value (Here amount is variable in state reducers which has amountReducer)
+  
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-secondary-subtle">
@@ -35,7 +38,7 @@ function Navbar() {
             </ul>
           </div>
         </div>
-        <div><button disabled className="btn btn-primary">your balance: 10000</button></div>
+        <div><button disabled className="btn btn-primary">your balance: {amount}</button>{/* the state amount is used in curly baces here */}</div>
       </nav>
     </div>
   );
